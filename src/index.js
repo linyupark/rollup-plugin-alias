@@ -78,13 +78,10 @@ export default function alias(options = {}) {
         if (match) {
           updatedId = match;
         // To keep the previous behaviour we simply return the file path
-        // with extension
-//         } else if (endsWith('.js', filePath)) {
-//           updatedId = filePath;
-//         } else {
-//           updatedId = filePath + '.js';
-//         }
-          updatedId = filePath
+//         with extension
+        } else {
+          updatedId = filePath;
+        }
       }
 
       // if alias is windows absoulate path return resolved path or
